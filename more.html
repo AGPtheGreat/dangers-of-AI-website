@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>More</title>
+  <link rel="stylesheet" href="css/moreStyles.css" />
+  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav>
+    <div class="nav-links">
+      <a href="welcome.html">Welcome</a>
+      <a href="about.html">About</a>
+      <a href="ethics.html">Unethical Uses</a>
+      <a href="logging.html">Logging</a>
+      <a href="Survey.html">Take our Survey</a>
+      <a href="access.html">Accessibility</a>
+      <a href="more.html" class="active">More</a>
+      <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+    </div>
+  </nav>
+
+  <div class="title-area">Polls, Videos, and More</div>
+
+  <main id="main" class="content">
+    <p>Explore additional resources related to AI usage.</p>
+
+    <div class="media-grid">
+      
+      <!-- YouTube Video -->
+      <div class="media-item">
+        <h2>YouTube Example: How AI Learns</h2>
+        <div class="video-container">
+          <iframe 
+            width="315" 
+            height="315" 
+            src="https://www.youtube.com/embed/ARIt2684fiM" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- New Poll Concern Image -->
+      <div class="media-item">
+        <h2>Growing Skepticism About AI</h2>
+        <div class="image-container">
+          <img src="media/pollConcern.JPG" alt="Poll showing concern about AI effects" />
+          <p class="photo-credit">
+            Image source: <a href="https://today.yougov.com/technology/articles/51803-americans-increasingly-skeptical-about-ai-artificial-intelligence-effects-poll" target="_blank" rel="noopener noreferrer">YouGov</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Reddit Jailbreak Example -->
+      <div class="media-item">
+        <h2>JailBroken ChatGPT Example (Reddit)</h2>
+        <div class="image-container">
+          <img src="media/redditEx.jpg" alt="Example of JailBroken AI found on reddit" />
+          <p class="photo-credit">
+            Image source: <a href="https://www.reddit.com/r/ChatGPT/comments/10x56vf/the_definitive_jailbreak_of_chatgpt_fully_freed/?rdt=38269" target="_blank" rel="noopener noreferrer">Reddit</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Pew Research Poll Example -->
+      <div class="media-item">
+        <h2>Pew Research Center Poll</h2>
+        <div class="image-container">
+          <img src="media/pollEx.jpg" alt="Poll Example from Pew Research Center" />
+          <p class="photo-credit">
+            Image source: <a href="https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/pi_2025-04-03_us-public-and-ai-experts_0-03/" target="_blank" rel="noopener noreferrer">Pew Research Center</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Last updated: April 29 2025</p>
+    <p>Contact: <a href="mailto:student@wsu.com">SystemDaemons@wsu.com</a></p>
+    <p>&copy; 2025 System Daemons. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/darkmode_toggle.js"></script>
+</body>
+</html>

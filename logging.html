@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Logging AI Usage and Ethical Considerations" />
+  <meta name="keywords" content="AI, Logging, Ethics, Form" />
+  <meta name="author" content="Your Name" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logging</title>
+  <link rel="stylesheet" href="css/loggingStyles.css" />
+  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav>
+    <div class="nav-links">
+      <a href="welcome.html">Welcome</a>
+      <a href="about.html">About</a>
+      <a href="ethics.html">Unethical Uses</a>
+      <a class="active" href="logging.html">Logging</a>
+      <a href="Survey.html">Take our Survey</a>
+      <a href="access.html">Accessibility</a>
+      <a href="more.html">More</a>
+      <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+    </div>
+  </nav>
+  
+  <div class="title-area">
+	<img src="media/favicon.ico" alt="System Daemons Favicon Left" class="favicon-left title-icon">
+	AI Ethics Logging Portal
+	<img src="media/favicon.ico" alt="System Daemons Favicon Right" class="favicon-right title-icon">
+	</div>
+  
+  <main id="main-content" class="content">
+    <!-- Description Section -->
+    <div class="description">
+      <p>
+        Welcome to the AI Ethics Logging Portal! This page allows users to log their interactions with AI technologies.
+        By submitting the form below, you can provide valuable insights into how AI is being used, and whether any ethical concerns arise from these interactions.
+        We encourage transparency, responsibility, and ethical awareness when using AI.
+      </p>
+    </div>
+
+    <h2>Log Your AI Interaction</h2>
+    <form id="aiLogForm" action="#" method="post" novalidate>
+      <label for="username">User Name:</label>
+      <input type="text" id="username" name="username" required aria-required="true" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required aria-required="true" />
+
+      <label for="date">Date of Interaction:</label>
+      <input type="date" id="date" name="date" required aria-required="true" />
+
+      <label for="type">Type of AI Used:</label>
+		<select id="type" name="type" required>
+			<option value="">-- Select One --</option>
+			<option value="chatbot">Chatbot (e.g., GPT-4, Siri, Alexa)</option>
+			<option value="image">Image Generator (e.g., DALL·E, Stable Diffusion)</option>
+			<option value="predictive">Predictive Model (e.g., Regression, Time Series)</option>
+			<option value="language">Natural Language Processing (e.g., BERT, GPT-3)</option>
+			<option value="reinforcement">Reinforcement Learning (e.g., AlphaGo)</option>
+			<option value="recommendation">Recommendation System (e.g., Netflix, YouTube)</option>
+			<option value="voice">Voice Recognition/Processing (e.g., Google Assistant)</option>
+			<option value="vision">Computer Vision (e.g., OpenCV, YOLO)</option>
+			<option value="robotics">Robotics (e.g., Boston Dynamics, ASIMO)</option>
+			<option value="generative">Generative Adversarial Networks (GANs)</option>
+			<option value="other">Other</option>
+		</select>
+
+      <label for="description">Description of Use:</label>
+      <textarea id="description" name="description" rows="8" required></textarea>
+
+      <label for="ethical-yes">Were any ethical concerns involved?</label>
+      <div class="radio-group">
+        <label><input type="radio" id="ethical-yes" name="ethical" value="yes" required /> Yes</label>
+        <label><input type="radio" id="ethical-no" name="ethicaal" value="no" /> No</label>
+      </div>
+
+      <label><input type="checkbox" name="consent" required /> I confirm the above is accurate and ethically reviewed.</label>
+
+      <button type="submit">Submit Log</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Last updated: April 29 2025</p>
+    <p>Contact: <a href="mailto:student@wsu.com">SystemDaemons@wsu.com</a></p>
+    <p>&copy; 2025 System Daemons. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/darkmode_toggle.js"></script>
+  <script src="scripts/logging.js"></script>
+</body>
+
+</html>

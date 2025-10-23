@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="scripts/darkmode_toggle.js"></script>
+  <meta charset="UTF-8">
+  <meta name="description" content="AI Ethics Survey" />
+  <meta name="keywords" content="AI, Survey, Ethics, Ethical Considerations" />
+  <meta name="author" content="Your Name" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Take our Survey!</title>
+  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/survey.css" />
+</head>
+<body class="dark">
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-links">
+      <a href="welcome.html">Welcome</a>
+      <a href="about.html">About</a>
+      <a href="ethics.html">Unethical Uses</a>
+      <a href="logging.html">Logging</a>
+      <a class="active" href="Survey.html">Take our Survey</a>
+      <a href="access.html">Accessibility</a>
+      <a href="more.html">More</a>
+      <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+    </div>
+  </nav>
+
+  <div class="title-area">
+    <h1>Take our Survey!</h1>
+  </div>
+
+   <main>
+    <form onsubmit="saveResponses(); return false;">
+      <table>
+        <thead>
+          <tr>
+            <th class="question">Survey Options</th>
+            <th>Unethical</th>
+            <th>Mostly Unethical</th>
+            <th>Unsure</th>
+            <th>Mostly Ethical</th>
+            <th>Ethical</th>
+          </tr>
+        </thead>
+        <tbody id="survey-body">
+          <!-- Javascript will populate questions here -->
+        </tbody>
+      </table>
+      
+      <!-- Submit Button -->
+      <div class="submit-container">
+        <button type="submit">Submit Survey</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Last updated: May 1 2025</p>
+    <p>Contact: <a href="mailto:student@wsu.com">SystemDaemons@wsu.com</a></p>
+    <p>&copy; 2025 System Daemons. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/ethics_survey.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+:root {
+  --bg-color: rgba(0, 0, 0, 0.5);
+  --text-color: white;
+  --nav-bg: rgba(0, 0, 0, 0.7);
+  --highlight-color: #eba1ef;
+  --form-bg: rgba(255, 255, 255, 0.1);
+  --form-border: #eba1ef;
+  --email-color: #ff00f7;
+}
+
+body.light {
+  --bg-color: rgba(255, 255, 255, 0.7);
+  --text-color: #111;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --highlight-color: #d16ecb;
+  --form-bg: rgba(255, 255, 255, 0.3);
+  --form-border: #d16ecb;
+  --link-color: #007acc;
+  --visited-link-color: #a52a2a;
+}
+
+body.light .example {
+  background: #f0f0f0;
+  color: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+nav {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+}
+
+.mode-toggle {
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.mode-toggle:hover {
+  background-color: #c069c7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--nav-bg);
+}
+
+footer a {
+	color: var(--email-color);
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.title-area {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.content {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 40px;
+  background: var(--bg-color);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.example {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-left: 6px solid var(--highlight-color);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.example:hover {
+  transform: scale(1.02);
+}
+
+.example h2 {
+  margin-bottom: 10px;
+  color: var(--highlight-color);
+}
+
+.example a {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+.example img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+

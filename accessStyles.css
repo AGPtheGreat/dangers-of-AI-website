@@ -1,0 +1,303 @@
+:root {
+   --bg-color: rgba(0, 0, 0, 0.5);
+   --text-color: white;
+   --nav-bg: rgba(0, 0, 0, 0.7);
+   --highlight-color: #eba1ef;
+   --form-bg: rgba(255, 255, 255, 0.1);
+   --form-border: #eba1ef;
+   --email-color: #ff00f7;
+}
+
+body.light {
+   --bg-color: rgba(255, 255, 255, 0.7);
+   --text-color: #111;
+   --nav-bg: rgba(255, 255, 255, 0.85);
+   --highlight-color: #d16ecb;
+   --form-bg: rgba(255, 255, 255, 0.3);
+   --form-border: #d16ecb;
+   --link-color: #007acc;
+   --visited-link-color: #a52a2a;
+ }
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html, body {
+   font-family: Arial, sans-serif;
+   color: var(--text-color);
+   background-color: var(--bg-color);
+   transition: background 0.3s, color 0.3s;
+}
+
+.skip-link {
+   position: absolute;
+   top: -40px;
+   left: 0;
+   background: #000;
+   color: #fff;
+   padding: 8px;
+   z-index: 100;
+}
+.skip-link:focus {
+   top: 0;
+}
+
+nav {
+   background-color: var(--nav-bg);
+   color: var(--text-color);
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 10;
+   gap: 10px;
+   transition: background-color 0.3s;
+}
+
+.nav-links {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+}
+
+.nav-links a {
+   color: var(--text-color);
+   padding: 10px 15px;
+   text-decoration: none;
+   transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+   background-color: var(--highlight-color);
+   border-radius: 5px;
+}
+
+.title-area {
+   font-size: 2em;
+   font-weight: bold;
+   text-align: center;
+   padding: 20px;
+   background-color: var(--nav-bg);
+   color: var(--text-color);
+   transition: background-color 0.3s, color 0.3s;
+   backdrop-filter: blur(10px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   position: relative;
+}
+
+.title-icon {
+   width: 60px;
+   height: 60px;
+   transition: transform 0.6s ease;
+}
+
+/* hover effect on our favicon at title */
+.title-icon:hover {
+   transform: rotate(360deg) scale(1.2);
+}
+
+
+.mode-toggle {
+   background-color: var(--highlight-color);
+   color: white;
+   border: none;
+   border-radius: 20px;
+   padding: 8px 16px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: background 0.3s;
+}
+
+.mode-toggle:hover {
+   background-color: #c069c7;
+}
+
+.content {
+   margin: 40px auto;
+   max-width: 1000px;
+   padding: 40px;
+   background: var(--bg-color);
+   backdrop-filter: blur(10px);
+   border-radius: 15px;
+   text-align: left;
+   animation: fadeIn 0.6s ease-in-out;
+   transition: background-color 0.3s, color 0.3s;
+   position: relative;
+}
+
+.description {
+   font-size: 1.2em;
+   margin-bottom: 30px;
+   text-align: center;
+   color: var(--text-color);
+   line-height: 1.5;
+   background: rgba(255, 255, 255, 0.2);
+   padding: 20px;
+   border-radius: 10px;
+   backdrop-filter: blur(10px);
+}
+
+form {
+   background: var(--form-bg);
+   padding: 40px;
+   border-radius: 10px;
+   border: 2px solid var(--form-border);
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   color: var(--text-color);
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+form label {
+   font-weight: bold;
+   text-align: left;
+}
+
+form input,
+form textarea,
+form select {
+   padding: 10px;
+   border: 1px solid var(--highlight-color);
+   border-radius: 5px;
+   background: rgba(255, 255, 255, 0.1);
+   color: var(--text-color);
+   font-size: 1em;
+   transition: background 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+   outline: 2px solid var(--highlight-color);
+   background-color: rgba(255, 255, 255, 0.2);
+}
+
+form select {
+   padding: 10px;
+   border: 1px solid var(--highlight-color);
+   border-radius: 5px;
+   background: rgba(0, 0, 0, 0.3);
+   color: #fff;
+   font-size: 1em;
+   transition: background 0.3s;
+}
+
+form select option:first-child {
+   color: #888;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+
+form select:focus {
+   outline: 2px solid var(--highlight-color);
+   background-color: rgba(255, 255, 255, 0.2);
+}
+
+form select option {
+   background-color: rgba(0, 0, 0, 0.3);
+   color: #fff;
+}
+
+form select option:hover {
+   background-color: #575757;
+}
+
+.radio-group {
+   display: flex;
+   justify-content: start;
+   gap: 20px;
+}
+
+form button[type="submit"] {
+   background: var(--highlight-color);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 12px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+   background: #c069c7;
+}
+
+footer {
+   text-align: center;
+   margin-top: 40px;
+   padding: 20px;
+   color: var(--text-color);
+   background-color: var(--nav-bg);
+}
+
+footer a {
+   color: var(--email-color);
+   text-decoration: none;
+}
+
+footer a:hover {
+   text-decoration: underline;
+}
+
+@keyframes fadeIn {
+   from {
+   opacity: 0;
+   transform: scale(0.95);
+   }
+
+   to {
+   opacity: 1;
+   transform: scale(1);
+   }
+}
+
+/* style the calendar icon to be white */
+input[type="date"]::-webkit-calendar-picker-indicator {
+   filter: invert(100%) brightness(200%);
+   -webkit-filter: invert(100%) brightness(200%); /* For Safari */
+}
+
+/* ensure other browsers like Firefox also reflect the change */
+input[type="date"]::-moz-calendar-picker-indicator {
+   filter: invert(100%) brightness(200%);
+}
+h1, h2 {
+   color: var(--highlight-color);
+   margin-bottom: 1rem;
+}
+
+.content ul {
+   list-style: disc inside;
+   text-align: left;
+   padding-left: 1.5rem;
+   margin-top: 10px;
+}
+
+.content a {
+   color: var(--email-color);
+   text-decoration: underline;
+}
+
+.content a:hover {
+   text-decoration: none;
+}
+
+.content section {
+   margin-bottom: 40px;
+}
+
+.description ul li {
+   margin-bottom: 0.5rem;
+}
